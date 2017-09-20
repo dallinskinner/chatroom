@@ -8,6 +8,7 @@
     "dev-server": "nodemon ./server/server.js --watch server/* localhost 3000",
     "build": "webpack -p"
   },
+  "repository": "git@github.com:dallinskinner/chatroom.git",
   "author": "Dallin Skinner",
   "license": "ISC",
   "dependencies": {
