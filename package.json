@@ -5,14 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-server": "nodemon ./server/server.js --watch server/* localhost 3000",
+    "dev-server": "nodemon ./server/server.js --watch server/* localhost 3001",
+    "dev-client": "webpack-dev-server",
+    "dev": "concurrently --kill-others \"npm run dev-server\" \"npm run dev-client\"",
     "build": "webpack -p"
   },
   "repository": "git@github.com:dallinskinner/chatroom.git",
   "author": "Dallin Skinner",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.16.2",
+    "cors": "^2.8.4",
     "express": "^4.15.4",
+    "react-dom": "^15.6.1",
+    "react-router-dom": "^4.2.2",
+    "reset-css": "^2.2.1",
     "socket.io": "^2.0.3"
   },
   "devDependencies": {
@@ -22,6 +29,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "concurrently": "^3.5.0",
     "css-loader": "^0.28.7",
     "eslint": "^4.7.1",
     "eslint-config-fbjs": "^2.0.0",
@@ -33,6 +41,7 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "node-sass": "^4.5.3",
     "nodemon": "^1.12.1",
+    "postcss-loader": "^2.0.6",
     "react": "^15.6.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",

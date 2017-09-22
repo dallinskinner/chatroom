@@ -1,7 +1,10 @@
-import io from 'socket.io-client';
+'use strict';
 
-let socket = io();
+import React from 'react';
+import ReactDOM from 'react-dom';
+import 'reset-css';
+// import global from './global/global.scss';
+import App from './components/App/App.jsx';
 
-socket.on('slack message', (data) => {
-  document.querySelector('#output').html = `Slack Message ${data.date}`;
-});
+ReactDOM.render(
+  (<App />), document.getElementById('root'));

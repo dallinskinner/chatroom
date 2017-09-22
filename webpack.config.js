@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve('client/dist'),
     filename: 'bundle.js',
+    publicPath: '/dist/',
   },
   module: {
     rules: [{
@@ -36,17 +37,13 @@ module.exports = {
   devServer: {
     hot: true,
     port: 3000,
-    publicPath: '/assets/',
+    publicPath: '/dist/',
     proxy: {
-      '/api': {
-        target: 'http://newneed.dev',
-        changeOrigin: true,
-      },
       '/': {
         'target': {
-          'host': 'newneed.dev',
+          'host': 'localhost',
           'protocol': 'http:',
-          'port': 80,
+          'port': 3001,
         },
         ignorePath: true,
         changeOrigin: true,
@@ -58,7 +55,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new ExtractTextPlugin({
       disable: process.env.NODE_ENV !== 'production',
-      filename: 'styles.css',
+      filename: 'style.css',
     }),
   ],
 };
