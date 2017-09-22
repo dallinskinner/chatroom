@@ -8,7 +8,7 @@
     "dev-server": "nodemon ./server/server.js --watch server/* localhost 3001",
     "dev-client": "webpack-dev-server",
     "dev": "concurrently --kill-others \"npm run dev-server\" \"npm run dev-client\"",
-    "build": "webpack -p"
+    "build": "NODE_ENV=production webpack -p"
   },
   "repository": "git@github.com:dallinskinner/chatroom.git",
   "author": "Dallin Skinner",
