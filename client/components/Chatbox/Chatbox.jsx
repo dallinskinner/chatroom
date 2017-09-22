@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Chatbox.scss';
 
 export default class Chatbox extends React.Component {
   constructor(props) {
@@ -20,11 +21,19 @@ export default class Chatbox extends React.Component {
     this.props.socket.sendMessage(this.props.handle, this.state.message);
   }
 
+  logout() {
+    this.props.socket.logout();
+  }
+
   render() {
     return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
-        <label>Logged in as: {this.props.handle}</label><br />
+      <form className={styles.chat} onSubmit={this.handleSubmit.bind(this)}>
+        <label>Logged in as: {this.props.handle}</label>
+        <button onClick={this.logout.bind(this)}>Logout</button>
+        <br />
+
         <textarea
+          className={styles['message-box']}
           placeholder="Message"
           onChange={this.handleMessageChange.bind(this)} />
         <input

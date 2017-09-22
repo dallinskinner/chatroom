@@ -1,0 +1,43 @@
+@import './variables';
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+input,
+textarea {
+  appearance: none;
+  background: none;
+  border: 1px solid $black;
+  border-radius: 0;
+  display: block;
+  font-family: $primary-font;
+  font-size: 18px;
+  padding: .55556em;
+  width: 100%;
+
+  & + & {
+    margin-top: 10px;
+  }
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: 1px solid $black;
+  border-radius: 0;
+  font-family: $primary-font;
+  margin-left: 5px;
+}
+
+body {
+  font-family: $primary-font;
+}

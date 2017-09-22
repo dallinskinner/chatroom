@@ -5,6 +5,8 @@ import Login from '../Login/Login.jsx';
 import Chatbox from '../Chatbox/Chatbox.jsx';
 import MessageWindow from '../MessageWindow/MessageWindow.jsx';
 
+import '../../global/global.scss';
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -34,6 +36,10 @@ export default class App extends React.Component {
 
   componentDidMount() {
     this.chatSocket.initListeners();
+
+    if (window.localStorage.getItem('chat-room-handle')) {
+      this.chatSocket.logon(window.localStorage.getItem('chat-room-handle'));
+    }
   }
 
   render() {

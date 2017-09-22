@@ -34,7 +34,14 @@ export default class ChatSocket {
       handle: handle,
     });
 
+    window.localStorage.setItem('chat-room-handle', handle);
+
     this.logonCallback(handle);
+  }
+
+  logout() {
+    window.localStorage.removeItem('chat-room-handle');
+    this.logonCallback(null);
   }
 
   sendMessage(handle, message) {

@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './MessageWindow.scss';
 
 export default class MessageWindow extends React.Component {
   constructor(props) {
@@ -7,9 +8,9 @@ export default class MessageWindow extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.messages}>
         {this.props.messages.map((message, i) => {
-          return <p key={i}>{message}</p>;
+          return <p className={styles.message} key={i}>{message}</p>;
         })}
       </div>
     );
