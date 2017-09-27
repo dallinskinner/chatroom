@@ -4,14 +4,21 @@ import ChatSocket from './ChatSocket';
 import Login from '../Login/Login.jsx';
 import Chatbox from '../Chatbox/Chatbox.jsx';
 import MessageWindow from '../MessageWindow/MessageWindow.jsx';
+import Window from '../Window/Window.jsx';
 
 import '../../global/global.scss';
+import styles from './App.scss';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
+
+    let url = window.location.hostname.includes('localhost') ?
+      'http://localhost:3001' :
+      `http://${window.location.hostname}`;
+
     this.chatSocket = new ChatSocket(
-      'http://localhost:3001',
+      url,
       this.updateMessages.bind(this),
       this.setHandle.bind(this)
     );
@@ -53,8 +60,19 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <MessageWindow messages={this.state.messages} />
-        {form}
+        <div className={styles.bg}>
+          <h1 className={styles.welcome}>Chat Room</h1>
+        </div>
+        <Window title={'Messages'} top={50} left={50}>
+          <MessageWindow messages={this.state.messages} />
+        </Window>
+        <Window
+          title={this.state.handle ? 'Chat' : 'Log In'}
+          top={300}
+          left={250}>
+
+          {form}
+        </Window>
       </div>
     );
   }

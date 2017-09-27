@@ -1,10 +1,16 @@
 @import '../../global/variables';
 
 .chat {
+  background-color: $white;
   margin: auto;
   max-width: $container-width;
+  padding: 10px;
 }
 
 .message-box {
   margin-top: 10px;
+}
+
+.logout {
+  float: right;
 }

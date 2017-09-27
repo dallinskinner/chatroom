@@ -10,7 +10,9 @@ export default class MessageWindow extends React.Component {
     return (
       <div className={styles.messages}>
         {this.props.messages.map((message, i) => {
-          return <p className={styles.message} key={i}>{message}</p>;
+          return (
+            <p className={styles.message} key={i}>{message}</p>
+          );
         })}
       </div>
     );

@@ -1,15 +1,7 @@
 @import '../../global/variables';
 
-.welcome {
-  font-size: 108px;
-  font-weight: 700;
-  margin-bottom: 100px;
-  margin-top: 200px;
-  text-align: center;
-}
-
 .login {
-  border: 1px solid $black;
+  background-color: $white;
   margin: auto;
   max-width: $container-width;
   padding: 20px;

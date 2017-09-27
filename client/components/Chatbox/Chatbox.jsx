@@ -19,6 +19,7 @@ export default class Chatbox extends React.Component {
     e.preventDefault();
 
     this.props.socket.sendMessage(this.props.handle, this.state.message);
+    this.messageBox.value = '';
   }
 
   logout() {
@@ -29,10 +30,13 @@ export default class Chatbox extends React.Component {
     return (
       <form className={styles.chat} onSubmit={this.handleSubmit.bind(this)}>
         <label>Logged in as: {this.props.handle}</label>
-        <button onClick={this.logout.bind(this)}>Logout</button>
+        <button
+          className={styles.logout}
+          onClick={this.logout.bind(this)}>Logout</button>
         <br />
 
         <textarea
+          ref={el => this.messageBox = el}
           className={styles['message-box']}
           placeholder="Message"
           onChange={this.handleMessageChange.bind(this)} />

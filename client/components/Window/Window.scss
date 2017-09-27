@@ -1,0 +1,43 @@
+@import '../../global/variables';
+
+.window {
+  min-width: 600px;
+  position: fixed;
+}
+
+.bar {
+  background-color: $white;
+  border: 2px solid $black;
+  bottom: 100%;
+  cursor: move;
+  left: 0;
+  padding: 5px 10px;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+}
+
+.content {
+  border: 2px solid $black;
+  border-top: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .minimized & {
+    display: none;
+  }
+}
+
+.title {
+  float: left;
+}
+
+.minimize {
+  cursor: pointer;
+  display: block;
+  float: right;
+  height: 16px;
+  width: 10px;
+}

@@ -24,10 +24,9 @@ export default class Login extends React.Component {
   render() {
     return (
       <section>
-        <h1 className={styles.welcome}>Chat Room</h1>
         <form className={styles.login} onSubmit={this.handleSubmit.bind(this)}>
           <input
-            placeholder="Handle"
+            placeholder="Username"
             type="text"
             onChange={this.handleHandleChange.bind(this)} />
           <input
