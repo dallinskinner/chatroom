@@ -19,12 +19,18 @@ export default class ChatSocket {
 
   initListeners() {
     this.socket.on(this.messageTypes.MESSAGE_RECEIVED, (data) => {
-      this.messages.push(`${data.handle}: ${data.message}`);
+      this.messages.push({
+        text: `${data.handle}: ${data.message}`,
+        time: data.time,
+      });
       this.messageCallback(this.messages);
     });
 
     this.socket.on(this.messageTypes.USER_NOTIFICATION, (data) => {
-      this.messages.push(`${data.handle} logged on`);
+      this.messages.push({
+        text: `${data.handle} logged on`,
+        time: data.time,
+      });
       this.messageCallback(this.messages);
     });
   }

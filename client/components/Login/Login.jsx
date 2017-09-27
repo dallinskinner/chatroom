@@ -26,7 +26,7 @@ export default class Login extends React.Component {
       <section>
         <form className={styles.login} onSubmit={this.handleSubmit.bind(this)}>
           <input
-            placeholder="Username"
+            placeholder="Losername"
             type="text"
             onChange={this.handleHandleChange.bind(this)} />
           <input
