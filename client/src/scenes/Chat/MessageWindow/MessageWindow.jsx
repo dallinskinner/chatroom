@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './MessageWindow.scss';
+import styles from './styles.scss';
 
 export default class MessageWindow extends React.Component {
   constructor(props) {

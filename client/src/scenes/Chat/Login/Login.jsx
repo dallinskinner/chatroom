@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Login.scss';
+import styles from './styles.scss';
 
 export default class Login extends React.Component {
   constructor(props) {

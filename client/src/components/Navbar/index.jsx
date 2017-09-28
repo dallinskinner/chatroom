@@ -1,6 +1,7 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
-import styles from './Navbar.scss';
+import styles from './styles.scss';
 
 export default class Navbar extends React.Component {
   render() {
@@ -10,14 +11,14 @@ export default class Navbar extends React.Component {
         <h2 className={styles.logo}>Loser Interface</h2>
         <ul className={styles.links}>
           <li>
-            <a className={'btn active'} href="/" title="Chat">
+            <NavLink className={'btn'} to="/" title="Chat">
               <img src={require('./img/chat.svg')} alt="Chat" />
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a className={'btn'} href="/" title="Shop">
+            <NavLink className={'btn'} to="/shop" title="Shop">
               <img src={require('./img/shop.svg')} alt="Shop" />
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>

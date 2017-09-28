@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Window.scss';
+import styles from './styles.scss';
 
 export default class Window extends React.Component {
   constructor(props) {
