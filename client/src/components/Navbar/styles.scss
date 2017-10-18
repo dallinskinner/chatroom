@@ -1,0 +1,34 @@
+@import '../../global/variables';
+
+.main {
+  align-items: center;
+  background-color: $white;
+  border-bottom: 2px solid $black;
+  border-top: 2px solid $black;
+  display: flex;
+  height: 40px;
+  left: 0;
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.logo {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.links {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+
+  li {
+    margin: 0 1px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

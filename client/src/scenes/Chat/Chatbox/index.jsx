@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Chatbox.scss';
+import styles from './styles.scss';
 
 export default class Chatbox extends React.Component {
   constructor(props) {

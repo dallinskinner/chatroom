@@ -1,15 +1,14 @@
 import React from 'react';
-import ChatSocket from './ChatSocket';
+import ChatSocket from '../../services/ChatSocket';
 
-import Login from '../Login/Login.jsx';
-import Chatbox from '../Chatbox/Chatbox.jsx';
-import MessageWindow from '../MessageWindow/MessageWindow.jsx';
-import Window from '../Window/Window.jsx';
+import Login from './Login';
+import Chatbox from './Chatbox';
+import MessageWindow from './MessageWindow';
+import Window from '../../components/Window';
 
 import '../../global/global.scss';
-import styles from './App.scss';
 
-export default class App extends React.Component {
+export default class Chat extends React.Component {
   constructor(props) {
     super(props);
 
@@ -42,6 +41,8 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
+    this.props.updateTitle('Chat Room');
+
     this.chatSocket.initListeners();
 
     if (window.localStorage.getItem('chat-room-handle')) {
@@ -60,10 +61,7 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <div className={styles.bg}>
-          <h1 className={styles.welcome}>Chat Room</h1>
-        </div>
-        <Window title={'Messages'} top={50} left={50}>
+        <Window title={'Messages'} top={68} left={0}>
           <MessageWindow messages={this.state.messages} />
         </Window>
         <Window
