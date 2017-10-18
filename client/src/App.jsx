@@ -18,8 +18,6 @@ export default class App extends React.Component {
   }
 
   updateTitle(title) {
-    console.log('updating title');
-    console.log(title);
     this.setState({
       title: title,
     });
