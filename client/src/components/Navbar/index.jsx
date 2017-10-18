@@ -12,7 +12,7 @@ export default class Navbar extends React.Component {
         <ul className={styles.links}>
           <li>
             <NavLink exact className={'btn'} to="/" title="Home">
-              <img src={require('./img/chat.svg')} alt="Home" />
+              <img src={require('./img/home.svg')} alt="Home" />
             </NavLink>
           </li>
           <li>
