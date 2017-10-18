@@ -11,7 +11,12 @@ export default class Navbar extends React.Component {
         <h2 className={styles.logo}>Loser Interface</h2>
         <ul className={styles.links}>
           <li>
-            <NavLink className={'btn'} to="/" title="Chat">
+            <NavLink exact className={'btn'} to="/" title="Home">
+              <img src={require('./img/chat.svg')} alt="Home" />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className={'btn'} to="/chat" title="Chat">
               <img src={require('./img/chat.svg')} alt="Chat" />
             </NavLink>
           </li>

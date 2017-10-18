@@ -1,10 +1,10 @@
 import React from 'react';
 import ChatSocket from '../../services/ChatSocket';
 
-import Login from './Login/Login.jsx';
-import Chatbox from './Chatbox/Chatbox.jsx';
-import MessageWindow from './MessageWindow/MessageWindow.jsx';
-import Window from '../../components/Window/Window.jsx';
+import Login from './Login';
+import Chatbox from './Chatbox';
+import MessageWindow from './MessageWindow';
+import Window from '../../components/Window';
 
 import '../../global/global.scss';
 
@@ -41,6 +41,8 @@ export default class Chat extends React.Component {
   }
 
   componentDidMount() {
+    this.props.updateTitle('Chat Room');
+
     this.chatSocket.initListeners();
 
     if (window.localStorage.getItem('chat-room-handle')) {
