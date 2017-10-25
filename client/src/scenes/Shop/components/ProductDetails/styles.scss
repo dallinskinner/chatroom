@@ -1,0 +1,43 @@
+@import '../../../../global/variables';
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.description {
+  margin-bottom: 10px;
+  max-width: 205px;
+}
+
+.quantity {
+  margin-left: auto;
+}
+
+.qty-input {
+  float: right;
+  font-size: 14px;
+  height: 25px;
+  padding: 5px;
+  text-align: center;
+  width: 25px;
+}
+
+.submit {
+  margin-top: auto;
+}
+
+.column {
+  display: flex;
+  flex: 0 0 50%;
+  flex-direction: column;
+}
+
+.price {
+  flex: 0 0 50%;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
