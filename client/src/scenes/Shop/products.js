@@ -17,6 +17,6 @@ export default [
       require('./img/cursor-patch.jpg')],
     name: 'Cursor Patch',
     price: 3,
-    description: 'The Loser Interface patch is as cool as it gets. That is, if you still like Digimon and can’t find Carmen Sandiego ya nerd. Put it on a shirt or a hat. Or maybe buy it and let it sit in a drawer for a while \'til you remember it’s there.',
+    description: 'The cursor patch is as cool as it gets. That is, if you still like Digimon and can’t find Carmen Sandiego ya nerd. Put it on a shirt or a hat. Or maybe buy it and let it sit in a drawer for a while \'til you remember it’s there.',
   },
 ];
