@@ -1,0 +1,25 @@
+@import '../../../../global/variables';
+
+.thumb {
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.2;
+  margin: 10px;
+  text-align: center;
+  width: 40px;
+
+  &:hover,
+  &.active {
+    color: $blue;
+
+    .image {
+      filter: invert(1);
+    }
+  }
+}
+
+.image {
+  height: auto;
+  margin-bottom: 5px;
+  width: 100%;
+}
