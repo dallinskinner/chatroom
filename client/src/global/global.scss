@@ -1,5 +1,35 @@
 @import './variables';
 
+@font-face {
+  font-family: 'gap-sans';
+  font-weight: 400;
+  src: url('./fonts/gapsans-webfont.eot?') format('eot'),
+       url('./fonts/gapsans-webfont.woff') format('woff'),
+       url('./fonts/gapsans-webfont.woff2') format('woff2'),
+       url('./fonts/gapsans-webfont.ttf') format('truetype'),
+       url('./fonts/gapsans-webfont.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'gap-sans';
+  font-weight: 700;
+  src: url('./fonts/gapsansbold-webfont.eot?') format('eot'),
+       url('./fonts/gapsansbold-webfont.woff') format('woff'),
+       url('./fonts/gapsansbold-webfont.woff2') format('woff2'),
+       url('./fonts/gapsansbold-webfont.svg') format('svg'),
+       url('./fonts/gapsansbold-webfont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'gap-sans';
+  font-weight: 900;
+  src: url('./fonts/gapsansblack-webfont.eot?') format('eot'),
+       url('./fonts/gapsansblack-webfont.woff') format('woff'),
+       url('./fonts/gapsansblack-webfont.woff2') format('woff2'),
+       url('./fonts/gapsansblack-webfont.svg') format('svg'),
+       url('./fonts/gapsansblack-webfont.ttf') format('truetype');
+}
+
 html {
   box-sizing: border-box;
 }
