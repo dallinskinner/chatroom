@@ -16,7 +16,11 @@ server.listen(port, function() {
   console.log(`Server listening at port ${port}`);
 });
 
-app.use(express.static(`${__dirname}/../client`));
+let staticServe = express.static(`${__dirname}/../client`);
+
+app.use(staticServe);
+app.use('/', staticServe);
+app.use('*', staticServe);
 
 io.on('connection', socket => {
 
